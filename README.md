@@ -9,8 +9,8 @@ I’m using virtual machines, real tools, and hands-on labs to explore core conc
 
 | Day | Topic | Notes |
 |-----|-------|-------|
-| 1 | Setting Up VirtualBox with Ubuntu & Windows 10 | [Day01](Day01/Notes.md) |
-| 2 | _Coming Soon_ | _Coming Soon_ |
+| 1 | Setting Up VirtualBox with Ubuntu & Windows 10 | [Day01](Day01/Notes.md) | [Day01](Day01/Lab_Setup_Guide.md)
+| 2 |Networking: NAT Network | [Day02](Day02/Notes.md) |[Day02](Day02/Setup_Guide.md)
 | 3 | _Coming Soon_ | _Coming Soon_ |
 
 ## 🔧 Tools Used
