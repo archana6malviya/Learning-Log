@@ -14,3 +14,8 @@
   - VM-to-VM communication
   - No direct host access to VMs (safe for testing malware, etc.)
 
+## Result:
+Ubuntu can ping Windows VM ✅
+Windows can ping Ubuntu VM ✅
+Both have internet access ✅
+
