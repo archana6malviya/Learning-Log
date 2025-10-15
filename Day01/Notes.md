@@ -7,6 +7,7 @@
 - A **hypervisor** is software that creates and manages our VM`s and lets you run multiple operating systems on the same hardware.
 - Oracle VirtualBox- **Type-2 hypervisor**, which runs on top of an existing OS (like Windows or macOS).It is free, easy to install and highly featured.
 - You can install guest operating systems like Windows 10 or Ubuntu inside VirtualBox.
+- Clone git repositery to our computer .
 
 
 ## 💡 Why This Matters
@@ -23,6 +24,7 @@ Setting up a safe, isolated environment is crucial for ethical hacking and cyber
 | Oracle VirtualBox | 7.2.2     | Installed on Windows 10     |
 | Windows 10 ISO | 21H2 (64-bit)     | From Microsoft site          |
 | Ubuntu ISO     | Ubuntu 22.04 LTS | From ubuntu.com              |
+| Clone Git Repositery | 2.51.0 for Windows | From git-scm.com  |
 
 ## 💡 Tips for Future
 - Always allocate enough RAM (minimum 2 GB for Ubuntu, 4 GB for Windows).
