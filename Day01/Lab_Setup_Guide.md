@@ -23,6 +23,13 @@ Install Oracle VirtualBox and set up virtual machines for Windows 10 and Ubuntu.
 6. Start VM and select the Windows 10 ISO
 7. Follow the Windows installation steps
 
+### Clone Git Repository
+1. Go to **git-scm.com** & download latest version.
+2. Follow installation process.
+3. Go to **cmd** on windows & Type **git clone https://github.com/archana6malviya/Learning-Log/edit/main**
+4. All the file Will Download on your machine.
+
+
 ## 3. Install Ubuntu VM
 ### Prerequisites:
 - Ubuntu ISO from [https://ubuntu.com/download](https://ubuntu.com/download)
