@@ -30,4 +30,5 @@ Setting up a safe, isolated environment is crucial for ethical hacking and cyber
 - Always allocate enough RAM (minimum 2 GB for Ubuntu, 4 GB for Windows).
 - Use **Guest Additions** in VirtualBox for better display/resolution.
 - Took snapshots before doing big changes in VMs.
+- Clone repository to computer.
 
