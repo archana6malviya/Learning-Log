@@ -1,4 +1,5 @@
-# Day 01 – Setting Up VirtualBox and Installing VMs
+# Day 01 – Setting Up VirtualBox and Installing VMs, Configured Windows and Ubantu Machine
+
 
 ## Date
 2025-11-14
@@ -7,8 +8,9 @@
 - A **hypervisor** is software that creates and manages our VM`s and lets you run multiple operating systems on the same hardware.
 - Oracle VirtualBox- **Type-2 hypervisor**, which runs on top of an existing OS (like Windows or macOS).It is free, easy to install and highly featured.
 - You can install guest operating systems like Windows 10 or Ubuntu inside VirtualBox.
-- Clone git repositery to our computer .
-
+- Clone git repositery to our both VM's.
+- Configured Windows & Ubantu for future use.
+- For Ubantu Machine- by installing the guest edition image, we can increase the screen resolution and allow for things like the shared clipboard.
 
 ## 💡 Why This Matters
 Setting up a safe, isolated environment is crucial for ethical hacking and cybersecurity testing. A virtual lab helps prevent harm to your actual system and allows you to simulate attacks legally.
