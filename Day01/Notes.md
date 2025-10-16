@@ -11,7 +11,8 @@
 - Clone git repositery to our both VM's.
 - Configured Windows & Ubantu for future use.
 - For Ubantu Machine- by installing the guest edition image, we can increase the screen resolution and allow for things like the shared clipboard.
-- Also Installed some packages and dependencies.
+- Also Installed some packages and dependencies- For this, made unexcutable file to excutable one with the help of **chmod** command.
+- 
 
 ## 💡 Why This Matters
 Setting up a safe, isolated environment is crucial for ethical hacking and cybersecurity testing. A virtual lab helps prevent harm to your actual system and allows you to simulate attacks legally.
