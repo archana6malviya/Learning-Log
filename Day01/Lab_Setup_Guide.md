@@ -42,6 +42,22 @@ Install Oracle VirtualBox and set up virtual machines for Windows 10 and Ubuntu.
 5. Start VM and select the Ubuntu ISO
 6. Follow the installation wizard
 
+### Configure Ubantu Machine
+1. Open Terminal
+2. Type **sudo apt update** & type Password.- For update
+3. Also **sudo apt install bzip2 tar gcc make perl git** & **Y**.- Required couple of package before installing guest addition CD.
+4. Also **sudo apt install linux-headers-generic**- It install generic kernel headers which again is for installing guest edtiotion image.
+5. Also **sudo apt install linux-headers-$(uname -r)**.- For latest kernel version.
+6. CD icon will appear on screen.
+7. Go to CD Directory from terminal.
+8. Type **ls**.
+9. Run **sudo ./VBoxlinuxaddition.run** .
+10. type **sudo reboot now**.
+11. For git **sudo apt install git**.
+
+
 ## ✅ Tips:
 - Enable virtualization in BIOS if VMs don't start
 - Use Guest Additions for better VM performance (available from VirtualBox menu)
+- if there is warning after runing sudo update command then type what given in warning with sudo. then try again **sudo apt update**.
+- 
