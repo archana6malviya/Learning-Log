@@ -54,10 +54,14 @@ Install Oracle VirtualBox and set up virtual machines for Windows 10 and Ubuntu.
 9. Run **sudo ./VBoxlinuxaddition.run** .
 10. type **sudo reboot now**.
 11. For git **sudo apt install git**.
+12. For Full screen- Go to **View** tab and **Full-screen Mode**.
+13. Go to **Devices** & **shared clipboard** then **bidirectional**.
+14. For removing unwanted icons on desktop- right click on icons -**eject** or **unpin**.
+15. Also installed some packgages and dependency for course- run **cd install.sh/** & **ls** & **chmod +x ./install.sh** & **./install.sh**.
 
 
 ## ✅ Tips:
 - Enable virtualization in BIOS if VMs don't start
 - Use Guest Additions for better VM performance (available from VirtualBox menu)
 - if there is warning after runing sudo update command then type what given in warning with sudo. then try again **sudo apt update**.
-- 
+- If ubantu not start or stuck, try to power off and ON after sometimes it will load after sometime.
