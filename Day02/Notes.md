@@ -3,6 +3,8 @@
 ## What I Did
 - Connected both Windows 10 and Ubuntu VMs to the same **NAT Network** in VirtualBox.
 - This allowed both VMs to **access the internet** and **communicate with each other**.
+- Both VM's are physically separated from our host but logically connected to each other.
+- Created a Network & then Apply it to the Network Adapters.
 
 ## What I Learned
 - **NAT Network** is different from basic **NAT**:
