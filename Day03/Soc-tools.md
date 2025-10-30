@@ -69,19 +69,26 @@ Organizes and tracks incidents through their lifecycle — detection, investigat
 
 - Packet Capture & Analysis- Real time or with captures
 - Network Traffic Analysis- statistical analysis, Machine learning, Behavior analysis
-- Intrusion Detection- 
-- 
+- Intrusion Detection- IDS functionality
+- Integration with SIEM- Correlate network events with endpoint telemetry
 
 **Use Case:** Detecting lateral movement, intrusion detection, traffic inspection.
 
 ## 💻 5. EDR (Endpoint Detection and Response)
 Provides visibility into endpoint activities and enables threat detection, investigation, and response.
 
-- **CrowdStrike Falcon**
+- **Crowdstrike**
+- **SOPHOS**
+- **Carbon Black**
 - **SentinelOne**
-- **Microsoft Defender for Endpoint**
-- **Trend Micro Vision One**
-- **Sophos Intercept X**
+
+- Real-time Endpoint Monitoring
+- User Entity Behavior Analytics(UEBA)
+- Threat Detection & Prevention
+- Incident Investigation
+- Remediation & Response
+- Integration with SIEM
+  
 **Use Case:**
 
   ## 💻 6. Firewalls(Network Firewalls, Next-Generation Firewalls NGFW, Web Application Firewalls WAF)
