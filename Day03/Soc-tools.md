@@ -8,20 +8,38 @@ Used for collecting, analyzing, and correlating logs to detect security incident
 
 - **Splunk**
 - **IBM QRadar**
-- **ArcSight (Micro Focus)**
+- **solarwinds**
 - **LogRhythm**
+- **Elastic Security**
+- **graylog**
 - **Azure Sentinel (Microsoft)**
 
+- Log Management
+- Real-time Monitoring
+- Alerting & Notification
+- Incident Response
+- Dashboards, Reports & Visualization
+- Threat Intelligence Integration
+  
 **Use Case:** Centralized log management, alerting, and compliance reporting.
 
 ## ⚙️ 2.  SOAR (Security Orchestration, Automation, and Response)
 Automates repetitive SOC tasks and streamlines incident workflows.
-- **Palo Alto Cortex XSOAR**
+
 - **IBM Resilient**
 - **Splunk SOAR (Phantom)**
-- **Swimlane**
-- **DFLabs IncMan SOAR**
+- **IBM Radar**
+-  **tines**
+-  **LogRhythm**
+-  **blink**
 
+- Orchestration- Workflows, Collaboration
+- Automation- Alert triage, Artifact collection, Data enrichment
+- Incident Response- Access & prioritize
+- Integration- TIPs, EDR, firewalls
+- Analytics & Intelligence
+- Reporting
+   
 **Use Case:** Incident response automation, playbook execution, alert triage.
 
 ## 🚨 3. Incident Management Tools
@@ -30,6 +48,14 @@ Organizes and tracks incidents through their lifecycle — detection, investigat
 - **ATLASSIAN**
 - **Servicenow**
 - **freshworks**
+- **onpage**
+
+- Incident Ticketing- Documentation, Tracking, Assigning
+- Alert Management
+- Workflow Automation
+- Collabpration
+  
+  
 **Use Case:**
 
   ## 🌐 4.  NSM (Network Security Monitoring)
