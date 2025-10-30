@@ -65,6 +65,12 @@ Organizes and tracks incidents through their lifecycle — detection, investigat
 - **Snort**
 - **Wireshark**
 - **Security Onion** *(includes multiple NSM tools)*
+- **Nagios**
+
+- Packet Capture & Analysis- Real time or with captures
+- Network Traffic Analysis- statistical analysis, Machine learning, Behavior analysis
+- Intrusion Detection- 
+- 
 
 **Use Case:** Detecting lateral movement, intrusion detection, traffic inspection.
 
