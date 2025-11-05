@@ -1,0 +1,23 @@
+## 🌐 Network Terms (Quick Notes)
+
+- **Bandwidth** – Max data transfer capacity (bits per second).  
+- **Cloud Computing** – Using internet-hosted servers and apps instead of local devices.  
+- **Cloud Network** – Servers storing data/resources in remote data centers accessible online.  
+- **Data Packet** – Basic unit of info sent across a network.  
+- **Hub** – Broadcasts data to all devices on a network.  
+- **Internet Protocol (IP)** – Rules for routing and addressing data packets.  
+- **IP Address** – Unique identifier for a device on the internet.  
+- **LAN (Local Area Network)** – Network within a small area (home, office, school).  
+- **MAC Address** – Unique hardware ID for a network device.  
+- **Modem** – Connects the router to the internet.  
+- **Network** – A group of connected devices.  
+- **OSI Model** – 7-layer framework for network communication.  
+- **Packet Sniffing** – Capturing and analyzing data packets.  
+- **Port** – Software-based endpoint for sending/receiving data.  
+- **Router** – Connects multiple networks and directs traffic.  
+- **Speed** – Data transfer rate (bits per second).  
+- **Switch** – Forwards data between specific devices on a LAN.  
+- **TCP/IP Model** – 4-layer model for data transmission.  
+- **TCP (Transmission Control Protocol)** – Connection-oriented data streaming.  
+- **UDP (User Datagram Protocol)** – Connectionless, faster but less reliable data transfer.  
+- **WAN (Wide Area Network)** – Network spanning large geographic areas.
