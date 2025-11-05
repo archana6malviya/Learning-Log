@@ -1,106 +1,99 @@
-**Learning Objectives**
-- Types of Networks
-- Physical components of a network
-- TCP/IP model provides a framework for network communication
-- Data is sent and received over a network
-- Network Architecture
+# Learning Objectives
+- **Types of Networks**
+- **Physical components of a network**
+- **TCP/IP model provides a framework for network communication**
+- **Data is sent and received over a network**
+- **Network Architecture**
 
-A network is a group of connected devices.
+# 🌐 Network Basics
 
-The devices on a network can communicate with each other over network cables, or wireless connections.
+## 🧩 What is a Network?
+A **network** is a group of connected devices that can **communicate** with each other using cables or wireless connections.
 
-Devices need to find each other on a network to establish communications. 
-These devices will use unique addresses, or identifiers, to locate each other. 
-The addresses will ensure that communications happens with the right device. 
-These are called the IP and MAC addresses. 
-Devices can communicate on two types of networks: 
-A local area network, also known as a LAN, and a wide area network, also known as a WAN.
-A local area network, or LAN, spans a small area like an office building, a school, or a home. For example, when a personal device like your cell phone or tablet connects to the WIFI in your house, they form a LAN. 
+---
 
-A wide area network or WAN spans a large geographical area like a city, state, or country.
+## 🖥️ Network Addresses
+- Devices use **unique addresses** to find each other.  
+- **IP Address:** Identifies devices on a network.  
+- **MAC Address:** Identifies the device’s hardware.  
+- These ensure data reaches the **correct device**.
 
-**🧩 Network Devices**
-🔌 1. Hub
+---
 
-Connects multiple computers in a network.
+## 🌍 Types of Networks
 
-Broadcasts data to all devices (no intelligence).
+| Type | Full Form | Description | Example |
+|------|------------|-------------|----------|
+| **LAN** | Local Area Network | Covers a small area like a home or office | Home Wi-Fi |
+| **WAN** | Wide Area Network | Covers large areas like cities or countries | The Internet |
 
-Layer: 1 – Physical Layer.
+---
 
-Limitation: Causes network congestion and collisions.
+## ✅ Summary
+- Networks connect devices for communication.  
+- IP & MAC addresses identify devices.  
+- LAN = small area; WAN = large area.
 
-🔀 2. Switch
+# 🧩 Network Devices 
 
-Connects devices within a LAN and forwards data only to the intended device.
+## 1. **Hub**
+- Connects multiple computers in a network.  
+- Broadcasts data to all devices (no filtering).  
+- **Layer:** 1 – Physical  
+- ⚠️ Causes network congestion and collisions.
 
-Uses MAC addresses for communication.
 
-Layer: 2 – Data Link Layer.
+## 2. **Switch**
+- Connects devices within a LAN.  
+- Forwards data only to the target device using **MAC addresses**.  
+- **Layer:** 2 – Data Link  
+- ✅ Reduces collisions and improves speed.
 
-Benefit: Reduces collisions and increases efficiency.
+## 3. **Router**
+- Connects different networks (LAN ↔ Internet).  
+- Routes data using **IP addresses**.  
+- **Layer:** 3 – Network  
+- ✅ Directs traffic efficiently; supports NAT, DHCP, and security.
 
-🌐 3. Router
 
-Connects different networks (e.g., LAN to Internet).
+## 4. **Firewall**
+- Monitors and filters network traffic.  
+- Protects from unauthorized access.  
+- **Layer:** 3–7  
+- 🔒 Enforces security rules.
 
-Routes data using IP addresses.
+## 5. **Modem**
+- Converts digital ↔ analog signals for Internet access.  
+- **Layer:** 1 – Physical  
+- 🌐 Connects local network to ISP.
 
-Layer: 3 – Network Layer.
+## 6. **Access Point (AP)**
+- Provides wireless (Wi-Fi) connectivity.  
+- Extends wired networks.  
+- **Layer:** 2 – Data Link  
+- 📶 Used in homes, offices, and public zones.
 
-Benefit: Directs traffic efficiently and supports NAT, DHCP, and security policies.
+---
 
-🧱 4. Firewall
+## 7. **Bridge**
+- Connects two LAN segments.  
+- Uses **MAC addresses** to forward traffic.  
+- **Layer:** 2 – Data Link  
 
-Monitors and filters traffic based on security rules.
+---
 
-Protects internal network from unauthorized access.
+## 8. **Gateway**
+- Translates between different network protocols.  
+- **Layer:** 3–7  
+- 🌍 Connects internal and external networks.
 
-Layer: 3–7.
+---
 
-Benefit: Enforces network security at the perimeter or host level.
+## 9. **Repeater**
+- Regenerates weak signals to extend range.  
+- **Layer:** 1 – Physical
+----
 
-🌍 5. Modem
-
-Converts digital signals to analog and vice versa for Internet access.
-
-Layer: 1 – Physical Layer.
-
-Use: Connects local network to the ISP.
-
-🧠 6. Access Point (AP)
-
-Provides wireless connectivity to devices.
-
-Extends wired network using Wi-Fi.
-
-Layer: 2 – Data Link Layer.
-
-Use: Offices, homes, and public Wi-Fi zones.
-
-🔄 7. Bridge
-
-Connects two LAN segments to manage traffic.
-
-Uses MAC addresses to forward data.
-
-Layer: 2 – Data Link Layer.
-
-📡 8. Gateway
-
-Acts as a translator between networks using different protocols.
-
-Layer: 3–7.
-
-Use: Connects an enterprise network to external systems (e.g., Internet).
-
-🕹️ 9. Repeater
-
-Boosts or regenerates weak signals.
-
-Layer: 1 – Physical Layer.
-
-Use: Extends network distance.
 | Device       | Layer | Function Summary                | Example Use Case            |
 | ------------ | ----- | ------------------------------- | --------------------------- |
 | Hub          | 1     | Broadcasts all data             | Small, legacy networks      |
@@ -113,62 +106,101 @@ Use: Extends network distance.
 | Gateway      | 3–7   | Protocol translation            | Connect dissimilar networks |
 | Repeater     | 1     | Extends signal range            | Extend network distance     |
 
-Virtualization tools are pieces of software that perform network operations. Virtualization tools carry out operations that would normally be completed by a hub, switch, router, or modem, and they are offered by Cloud service providers. These tools provide opportunities for cost savings and scalability.
+---
+## ☁️ **Virtualization Tools**
+- Software-based versions of physical network devices (hub, switch, router, modem).  
+- Offered by **cloud providers** for **cost savings** and **scalability**.  
 
 
 
 
-**Cloud Networks**
-1. What is a Cloud Network?
+# ☁️ Cloud Networks
 
-A cloud network is an IT infrastructure where some or all of the network resources and services are hosted in the cloud.
-Instead of being fully on-premises, parts of the network—like routers, firewalls, servers, and storage—are managed and delivered via cloud platforms (e.g., AWS, Azure, Google Cloud).
-| Type              | Description                                                    | Example                 |
-| ----------------- | -------------------------------------------------------------- | ----------------------- |
-| **Public Cloud**  | Shared cloud infrastructure managed by third parties           | AWS, Azure, GCP         |
-| **Private Cloud** | Dedicated cloud environment for one organization               | VMware Cloud, OpenStack |
-| **Hybrid Cloud**  | Combines private + public clouds for flexibility               | AWS Outposts, Azure Arc |
-| **Multi-Cloud**   | Uses multiple cloud providers for redundancy or specialization | AWS + GCP mix           |
+## 1. What is a Cloud Network?
+A **cloud network** is an IT setup where some or all networking resources (routers, firewalls, servers, storage) are hosted in the **cloud** instead of on-premises.  
+Cloud platforms like **AWS**, **Azure**, and **Google Cloud** deliver these services.
 
-3. Components of a Cloud Network
+---
 
-Cloud Router: Virtual router connecting cloud and on-prem resources
+## 2. Types of Cloud Networks
 
-Virtual Private Cloud (VPC): Isolated cloud network space
+| Type | Description | Example |
+|------|--------------|----------|
+| **Public Cloud** | Shared infrastructure managed by third parties | AWS, Azure, GCP |
+| **Private Cloud** | Dedicated cloud for one organization | VMware Cloud, OpenStack |
+| **Hybrid Cloud** | Mix of private + public for flexibility | AWS Outposts, Azure Arc |
+| **Multi-Cloud** | Uses multiple cloud providers | AWS + GCP |
 
-Load Balancer: Distributes traffic across servers
+---
 
-Firewall / Security Group: Controls inbound and outbound traffic
+## 3. Components
 
-Cloud Storage: Scalable data storage (e.g., S3 buckets, Azure Blob)
+- **Cloud Router** – Connects cloud and on-prem networks  
+- **VPC (Virtual Private Cloud)** – Isolated cloud network space  
+- **Load Balancer** – Distributes traffic evenly  
+- **Firewall / Security Group** – Controls incoming & outgoing traffic  
+- **Cloud Storage** – Scalable storage (e.g., S3, Azure Blob)  
+- **VPN Gateway** – Secure link between on-prem and cloud  
 
-VPN Gateway: Connects on-premises networks securely to the cloud
-5. Key Benefits
+---
 
-🌐 Scalability: Quickly adjust to demand.
+## 4. Key Benefits
 
-💰 Cost Efficiency: Pay only for what you use.
-
-🧩 Flexibility: Integrate with multiple environments.
-
-🔒 Security: Built-in encryption, identity, and access controls.
-
-🕒 High Availability: Redundant systems prevent downtime.
+- 🌐 **Scalability:** Easily scale up or down  
+- 💰 **Cost Efficiency:** Pay only for what you use  
+- 🧩 **Flexibility:** Works with multiple environments  
+- 🔒 **Security:** Encryption & access control  
+- 🕒 **High Availability:** Redundant systems reduce downtime
 
 
-**Intro to network communication**
-Communication over a network happens when data is transferred from one point to another. Pieces of data are typically referred to as data packets. A data packet is a basic unit of information that travels from one device to another within a network. When data is sent from one device to another across a network, it is sent as a packet that contains information about where the packet is going, where it's coming from, and the content of the message.
- A data packet is very similar to a physical letter. It contains a header that includes the internet protocol address, the IP address, and the media access control, or MAC, address of the destination device. It also includes a protocol number that tells the receiving device what to do with the information in the packet. Then there's the body of the packet, which contains the message that needs to be transmitted to the receiving device. 
-Finally, at the end of the packet, there's a footer, similar to a signature on a letter, the footer signals to the receiving device that the packet is finished.
- Network performance can be measured by bandwidth. Bandwidth refers to the amount of data a device receives every second. You can calculate bandwidth by dividing the quantity of data by the time in seconds. Speed refers to the rate at which data packets are received or downloaded. Security personnel are interested in network bandwidth and speed because if either are irregular, it could be an indication of an attack. 
-Packet sniffing is the practice of capturing and inspecting data packets across the network. Communication on the network is important for sharing resources and data because it allows organizations to function effectively. Coming up, you'll learn more about the protocols to support network communication. 
+# 💬 Intro to Network Communication
+
+## 🧠 What is Network Communication?
+Network communication happens when **data is transferred** from one device to another across a network.  
+Data is sent in small units called **data packets**.
+
+---
+
+## 📦 Data Packets
+A **data packet** is like a digital letter — it carries all the info needed for delivery.
+
+| Part | Description |
+|------|--------------|
+| **Header** | Contains source & destination IP and MAC addresses, plus protocol info |
+| **Body** | The actual data/message being sent |
+| **Footer** | Marks the end of the packet (like a signature) |
+
+---
+
+## ⚙️ Network Performance
+- **Bandwidth:** Amount of data transferred per second  
+  → `Bandwidth = Data / Time`
+- **Speed:** How fast data packets are sent or received  
+- **Monitoring:** Sudden drops or spikes in bandwidth/speed may signal a network issue or attack  
+
+---
+
+## 🕵️ Packet Sniffing
+**Packet sniffing** = capturing and inspecting packets on a network.  
+Used by network admins and security teams to **monitor**, **analyze**, or **detect threats**.
+
+---
+
+## ✅ Why It Matters
+- Enables data sharing and communication  
+- Improves organizational efficiency  
+- Supports other network functions and protocols
+
 **The TCP/IP model**
-1. Introduction
+# 🌐 The TCP/IP Model
 
-The TCP/IP model (Transmission Control Protocol / Internet Protocol) is the foundation of modern networking.
-It defines how data is transmitted from one device to another over the internet or any network.
+## 1. Introduction
+The **TCP/IP model (Transmission Control Protocol / Internet Protocol)** is the **foundation of modern networking**.  
+It defines how data moves between devices over the internet or any network.  
+It has **4 layers**, each with specific communication roles.
 
-It has 4 layers, each responsible for specific communication functions.
+---
+
 2. Layers of the TCP/IP Model
 | Layer                    | Function                                                        | Protocols                               | Devices                |
 | ------------------------ | --------------------------------------------------------------- | --------------------------------------- | ---------------------- |
@@ -177,49 +209,71 @@ It has 4 layers, each responsible for specific communication functions.
 | **Internet Layer**       | Handles logical addressing and routing of packets               | IP (IPv4/IPv6), ICMP, ARP               | Routers                |
 | **Network Access Layer** | Defines how data is physically sent over the medium             | Ethernet, Wi-Fi, PPP, MAC               | Switches, NICs, cables |
 
-3. TCP/IP vs OSI Model
-   | Feature      | TCP/IP Model                     | OSI Model                                            |
-| ------------ | -------------------------------- | ---------------------------------------------------- |
-| Layers       | 4                                | 7                                                    |
-| Developed By | U.S. Department of Defense (DoD) | ISO (International Organization for Standardization) |
-| Approach     | Practical, protocol-based        | Theoretical, conceptual                              |
-| Most Used    | Internet & modern networks       | Reference for learning                               |
-4. How TCP/IP Works (Data Flow)
 
-Application Layer – User sends a message (e.g., an email or web request).
+## 3. Data Flow (How It Works)
+1. **Application Layer** – Creates data (e.g., web request).  
+2. **Transport Layer** – Breaks data into segments (TCP/UDP).  
+3. **Internet Layer** – Adds IP addresses and routes packets.  
+4. **Network Access Layer** – Sends bits through the physical medium.  
+🔁 The process reverses at the destination to rebuild the message.
 
-Transport Layer – Data is divided into segments (TCP) or datagrams (UDP).
+---
+## 5. Key Protocols
+- **TCP:** Reliable, connection-oriented communication  
+- **UDP:** Fast, connectionless communication  
+- **IP:** Logical addressing and routing  
+- **DNS:** Translates domain names to IPs  
+- **HTTP/HTTPS:** Web communication  
+- **ICMP:** Diagnostics (used by `ping`, `traceroute`)
 
-Internet Layer – Adds IP addresses and determines the path (routing).
+---
 
-Network Access Layer – Converts packets into bits and sends them via physical media.
+## ✅ Summary
+- TCP/IP = Internet’s backbone  
+- 4 layers work together for communication  
+- **TCP ensures reliability**, **IP handles routing**  
+- Combines hardware & software network functions
 
-At the destination, the process is reversed to reassemble the original message.
-6. Key Protocols Explained
+**brief**
+The network access layer -creation of data packets and their transmission across a network. This includes hardware devices connected to physical cables and switches that direct data to its destination
+Hubs, modems, cables, and wiring 
+The address resolution protocol (ARP) is part of the network access layer. Since MAC addresses are used to identify hosts on the same physical network, ARP is needed to map IP addresses to MAC addresses for local network communication.
 
-TCP (Transmission Control Protocol) → Reliable, connection-oriented communication.
+the internet layer- The internet layer is where IP addresses are attached to data packets to indicate the location of the sender and receiver. The internet layer also focuses on how networks connect to each other. For example, data packets containing information that determine whether they will stay on the LAN or will be sent to a remote network, like the internet.
+ The internet layer also determines which protocol is responsible for delivering the data packets and ensures the delivery to the destination host. Here are some of the common protocols that operate at the internet layer:
 
-UDP (User Datagram Protocol) → Faster, connectionless communication.
+Internet Protocol (IP). IP sends the data packets to the correct destination and relies on the Transmission Control Protocol/User Datagram Protocol (TCP/UDP) to deliver them to the corresponding service. IP packets allow communication between two networks. They are routed from the sending network to the receiving network. TCP in particular retransmits any data that is lost or corrupt.
 
-IP (Internet Protocol) → Logical addressing and routing.
+Internet Control Message Protocol (ICMP). The ICMP shares error information and status updates of data packets. This is useful for detecting and troubleshooting network errors. The ICMP reports information about packets that were dropped or that disappeared in transit, issues with network connectivity, and packets redirected to other routers.
+ The transport layer includes protocols to control the flow of traffic across a network. 
+These protocols permit or deny communication with other devices and include information about the status of the connection. Activities of this layer include error control, which ensures data is flowing smoothly across the network. 
+The transport layer is responsible for delivering data between two systems or networks and includes protocols to control the flow of traffic across a network. TCP and UDP are the two transport protocols that occur at this layer. 
 
-DNS (Domain Name System) → Translates domain names into IP addresses.
+Transmission Control Protocol 
+The Transmission Control Protocol (TCP) is an internet communication protocol that allows two devices to form a connection and stream data. It ensures that data is reliably transmitted to the destination service. TCP contains the port number of the intended destination service, which resides in the TCP header of a TCP/IP packet.
 
-HTTP/HTTPS → Used for web communication.
+User Datagram Protocol 
+The User Datagram Protocol (UDP) is a connectionless protocol that does not establish a connection between devices before transmissions. It is used by applications that are not concerned with the reliability of the transmission. Data sent over UDP is not tracked as extensively as data sent using TCP. Because UDP does not establish network connections, it is used mostly for performance sensitive applications that operate in real time, such as video streaming.
+at the application layer, protocols determine how the data packets will interact with receiving devices. Functions that are organized at application layer include file transfers and email services. 
+The application layer in the TCP/IP model is similar to the application, presentation, and session layers of the OSI model. The application layer is responsible for making network requests or responding to requests. This layer defines which internet services and applications any user can access. Protocols in the application layer determine how the data packets will interact with receiving devices. Some common protocols used on this layer are: 
 
-ICMP (Internet Control Message Protocol) → Used by ping and traceroute tools for diagnostics.
+Hypertext transfer protocol (HTTP)
 
-✅ Summary
+Simple mail transfer protocol (SMTP)
 
-TCP/IP = Backbone of the Internet.
+Secure shell (SSH)
 
-4 layers work together for data transfer.
+File transfer protocol (FTP)
 
-TCP ensures reliability; IP ensures routing.
+Domain name system (DNS)
 
-Combines both hardware and software aspects of networking.
+Application layer protocols rely on underlying layers to transfer the data across the network.
+<img width="11319" height="4707" alt="RbNt47PDRTGJZ6q_QtaNMg_9b9098ac04e84c2d8ad04b220c5456f1_CS_R-210_TCP-vs-OSI" src="https://github.com/user-attachments/assets/2afbfbb3-11aa-4a44-9523-cd339982bbb5" />
 
 **The OSI model**
+The OSI visually organizes network protocols into different layers. Network professionals often use this model to communicate with each other about potential sources of problems or security threats when they occur. 
+
+The TCP/IP model combines multiple layers of the OSI model. There are many similarities between the two models. Both models define standards for networking and divide the network communication process into different layers. The TCP/IP model is a simplified version of the OSI model.
 **IP addresses & network communication**
 
   
