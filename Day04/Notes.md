@@ -191,7 +191,7 @@ Used by network admins and security teams to **monitor**, **analyze**, or **dete
 - Improves organizational efficiency  
 - Supports other network functions and protocols
 
-**The TCP/IP model**
+
 # 🌐 The TCP/IP Model
 
 ## 1. Introduction
@@ -201,7 +201,7 @@ It has **4 layers**, each with specific communication roles.
 
 ---
 
-2. Layers of the TCP/IP Model
+## 2. Layers of the TCP/IP Model
 | Layer                    | Function                                                        | Protocols                               | Devices                |
 | ------------------------ | --------------------------------------------------------------- | --------------------------------------- | ---------------------- |
 | **Application Layer**    | Provides services for network applications and user interaction | HTTP, HTTPS, FTP, DNS, SMTP, POP3, DHCP | Computers, servers     |
@@ -234,41 +234,64 @@ It has **4 layers**, each with specific communication roles.
 - **TCP ensures reliability**, **IP handles routing**  
 - Combines hardware & software network functions
 
-**brief**
-The network access layer -creation of data packets and their transmission across a network. This includes hardware devices connected to physical cables and switches that direct data to its destination
-Hubs, modems, cables, and wiring 
-The address resolution protocol (ARP) is part of the network access layer. Since MAC addresses are used to identify hosts on the same physical network, ARP is needed to map IP addresses to MAC addresses for local network communication.
+# 🌐 TCP/IP Model — Brief Notes
 
-the internet layer- The internet layer is where IP addresses are attached to data packets to indicate the location of the sender and receiver. The internet layer also focuses on how networks connect to each other. For example, data packets containing information that determine whether they will stay on the LAN or will be sent to a remote network, like the internet.
- The internet layer also determines which protocol is responsible for delivering the data packets and ensures the delivery to the destination host. Here are some of the common protocols that operate at the internet layer:
+## 🧱 1. Network Access Layer
+- Handles **creation and transmission** of data packets.  
+- Involves **hardware**: hubs, modems, cables, and switches.  
+- Uses **MAC addresses** for device identification.  
+- **ARP (Address Resolution Protocol):** Maps IP ↔ MAC addresses for local communication.  
+- Ensures data moves through the **physical network** efficiently.
 
-Internet Protocol (IP). IP sends the data packets to the correct destination and relies on the Transmission Control Protocol/User Datagram Protocol (TCP/UDP) to deliver them to the corresponding service. IP packets allow communication between two networks. They are routed from the sending network to the receiving network. TCP in particular retransmits any data that is lost or corrupt.
+---
 
-Internet Control Message Protocol (ICMP). The ICMP shares error information and status updates of data packets. This is useful for detecting and troubleshooting network errors. The ICMP reports information about packets that were dropped or that disappeared in transit, issues with network connectivity, and packets redirected to other routers.
- The transport layer includes protocols to control the flow of traffic across a network. 
-These protocols permit or deny communication with other devices and include information about the status of the connection. Activities of this layer include error control, which ensures data is flowing smoothly across the network. 
-The transport layer is responsible for delivering data between two systems or networks and includes protocols to control the flow of traffic across a network. TCP and UDP are the two transport protocols that occur at this layer. 
+## 🌍 2. Internet Layer
+- Adds **IP addresses** to packets (source & destination).  
+- Decides if data stays on the **LAN** or goes to a **remote network (WAN/Internet)**.  
+- Handles **routing** and **network-to-network communication**.
 
-Transmission Control Protocol 
-The Transmission Control Protocol (TCP) is an internet communication protocol that allows two devices to form a connection and stream data. It ensures that data is reliably transmitted to the destination service. TCP contains the port number of the intended destination service, which resides in the TCP header of a TCP/IP packet.
+**Key Protocols:**
+- **IP (Internet Protocol):** Directs packets to their destination.  
+- **ICMP (Internet Control Message Protocol):** Reports errors and network status (used in `ping`, `traceroute`).  
+- Works with **TCP/UDP** for final delivery.
 
-User Datagram Protocol 
-The User Datagram Protocol (UDP) is a connectionless protocol that does not establish a connection between devices before transmissions. It is used by applications that are not concerned with the reliability of the transmission. Data sent over UDP is not tracked as extensively as data sent using TCP. Because UDP does not establish network connections, it is used mostly for performance sensitive applications that operate in real time, such as video streaming.
-at the application layer, protocols determine how the data packets will interact with receiving devices. Functions that are organized at application layer include file transfers and email services. 
-The application layer in the TCP/IP model is similar to the application, presentation, and session layers of the OSI model. The application layer is responsible for making network requests or responding to requests. This layer defines which internet services and applications any user can access. Protocols in the application layer determine how the data packets will interact with receiving devices. Some common protocols used on this layer are: 
+---
 
-Hypertext transfer protocol (HTTP)
+## 🚚 3. Transport Layer
+- Manages **end-to-end communication** and **flow control**.  
+- Ensures reliable or fast delivery depending on protocol.  
+- Handles **error detection**, **connection status**, and **data integrity**.
 
-Simple mail transfer protocol (SMTP)
+**Main Protocols:**
+- **TCP (Transmission Control Protocol):**  
+  - Connection-oriented, reliable, retransmits lost data.  
+  - Used for web browsing, emails, file transfers.  
+- **UDP (User Datagram Protocol):**  
+  - Connectionless, faster, less reliable.  
+  - Used in video streaming, gaming, voice calls.
 
-Secure shell (SSH)
+---
 
-File transfer protocol (FTP)
+## 💻 4. Application Layer
+- Defines **how applications interact** with the network.  
+- Handles **user-facing services** like file sharing and email.  
+- Similar to the top 3 layers of the OSI model (Application, Presentation, Session).  
+- Relies on lower layers for actual data transfer.
 
-Domain name system (DNS)
+**Common Protocols:**
+- **HTTP / HTTPS** – Web browsing  
+- **SMTP** – Email sending  
+- **SSH** – Secure remote access  
+- **FTP** – File transfer  
+- **DNS** – Converts domain names to IPs  
 
-Application layer protocols rely on underlying layers to transfer the data across the network.
-<img width="11319" height="4707" alt="RbNt47PDRTGJZ6q_QtaNMg_9b9098ac04e84c2d8ad04b220c5456f1_CS_R-210_TCP-vs-OSI" src="https://github.com/user-attachments/assets/2afbfbb3-11aa-4a44-9523-cd339982bbb5" />
+---
+
+## ✅ Summary
+- **Network Access:** Physical transmission, ARP  
+- **Internet:** IP addressing & routing  
+- **Transport:** Reliable delivery (TCP/UDP)  
+- **Application:** User services (HTTP, DNS, FTP, SMTP)
 
 **The OSI model**
 The OSI visually organizes network protocols into different layers. Network professionals often use this model to communicate with each other about potential sources of problems or security threats when they occur. 
