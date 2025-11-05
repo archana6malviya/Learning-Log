@@ -293,10 +293,199 @@ It has **4 layers**, each with specific communication roles.
 - **Transport:** Reliable delivery (TCP/UDP)  
 - **Application:** User services (HTTP, DNS, FTP, SMTP)
 
-**The OSI model**
-The OSI visually organizes network protocols into different layers. Network professionals often use this model to communicate with each other about potential sources of problems or security threats when they occur. 
+# 🧩 The OSI Model (Open Systems Interconnection)
 
-The TCP/IP model combines multiple layers of the OSI model. There are many similarities between the two models. Both models define standards for networking and divide the network communication process into different layers. The TCP/IP model is a simplified version of the OSI model.
-**IP addresses & network communication**
+The **OSI Model** explains how data moves through a network in **7 layers**.  
+It helps network and security professionals understand, design, and troubleshoot communication systems.
 
-  
+---
+
+## 🌐 TCP/IP vs OSI Model
+| Feature | **TCP/IP Model** | **OSI Model** |
+|----------|------------------|----------------|
+| Layers | 4 | 7 |
+| Developed By | U.S. DoD | ISO |
+| Purpose | Practical, protocol-based | Theoretical, reference model |
+| Use | Internet and modern networks | Learning & troubleshooting |
+
+**TCP/IP Layers:** Network Access, Internet, Transport, Application  
+**OSI Layers:** Physical, Data Link, Network, Transport, Session, Presentation, Application
+
+---
+
+## 🧱 OSI Layers (Top to Bottom)
+
+### **Layer 7 – Application**
+- Closest to the user — enables apps to access the network.  
+- Examples: **HTTP/HTTPS, SMTP, DNS, FTP**  
+- Handles user services like web browsing, email, and file transfer.
+
+---
+
+### **Layer 6 – Presentation**
+- Converts data formats for sending/receiving systems.  
+- Handles **encryption, compression, translation**.  
+- Example: **SSL/TLS** encryption in HTTPS.
+
+---
+
+### **Layer 5 – Session**
+- Manages and maintains communication **sessions** between devices.  
+- Handles **authentication, reconnection, and checkpoints**.  
+- Keeps sessions open during data transfer, then closes them.
+
+---
+
+### **Layer 4 – Transport**
+- Ensures **reliable delivery**, **error control**, and **segmentation**.  
+- Protocols: **TCP (reliable)**, **UDP (fast)**.  
+- Manages data flow and speed between systems.
+
+---
+
+### **Layer 3 – Network**
+- Handles **routing and addressing** between different networks.  
+- Uses **IP addresses** to deliver packets to destinations.  
+- Devices: **Routers**  
+- Protocols: **IP, ICMP**
+
+---
+
+### **Layer 2 – Data Link**
+- Transfers data within the **same network (LAN)**.  
+- Uses **MAC addresses** for local delivery.  
+- Devices: **Switches, NICs**  
+- Protocols: **HDLC, SDLC, NCP**
+
+---
+
+### **Layer 1 – Physical**
+- Deals with **actual hardware and transmission** (cables, signals, hubs).  
+- Converts data into bits (0s & 1s).  
+- Devices: **Hubs, Modems, Cables**
+
+---
+
+## ✅ Key Takeaways
+- **OSI = 7 Layers**, **TCP/IP = 4 Layers (simplified version)**  
+- Both models describe **how data travels** from sender to receiver.  
+- **OSI** helps in **troubleshooting**, **TCP/IP** helps in **implementation**.  
+- Knowing both models is essential for network and security professionals.
+
+
+# 🌐 IP Addresses & Network Communication
+
+## ✅ What is an IP Address?
+An **IP address (Internet Protocol address)** is a unique identifier that shows the **location of a device** on a network—similar to a home mailing address.
+
+Two main versions:
+- **IPv4:** Four numbers separated by dots (e.g., 192.168.1.1)  
+- **IPv6:** 32-character hexadecimal address (allows more devices)
+
+---
+
+## 🌍 Public vs Private IP Addresses
+- **Public IP:**  
+  - Assigned by your ISP  
+  - Visible on the internet  
+  - Shared by all devices in your home (via router/NAT)
+
+- **Private IP:**  
+  - Used inside local networks (home, office)  
+  - Not visible outside the network  
+  - Each device gets its own private IP
+
+---
+
+## 🖧 MAC Addresses
+- A **MAC address** is a unique hardware identifier assigned to a device’s network interface.  
+- Switches use MAC addresses to deliver packets within a LAN.  
+- A **MAC Address Table** stores device → switch port mappings (like an internal address book).
+
+---
+
+## 📌 Summary
+- IPv4 = shorter, older; IPv6 = longer, newer, supports more devices  
+- Public IP = internet-facing; Private IP = local network only  
+- MAC addresses identify physical devices  
+- IP + MAC work together to ensure data reaches the correct device
+
+
+  # 🌍 Components of Network Layer Communication
+
+The **Network Layer (Layer 3 of the OSI Model)** manages **addressing, routing, and delivery** of data packets across networks.
+
+---
+
+## ⚙️ Network Layer Operations
+- Handles **IP addressing** and **packet delivery** between devices.  
+- Routes packets **from one router to another** until reaching the destination IP.  
+- Uses **routing tables** to remember network paths.  
+- Each packet contains:
+  - **Source & Destination IP**
+  - **Protocol info**
+  - **Packet size**
+
+Packets can be:
+- **IP Packets** → Used by TCP connections  
+- **Datagrams** → Used by UDP connections  
+
+---
+
+## 📦 IPv4 Packet Structure
+An **IPv4 Packet** has two parts:  
+1. **Header (20–60 bytes)** – routing & control info  
+2. **Data** – actual message content (up to 65,535 bytes total)
+
+### 🧩 IPv4 Header Fields (13)
+| Field | Function |
+|-------|-----------|
+| **Version (VER)** | Indicates protocol version (IPv4) |
+| **Header Length (IHL)** | Defines where header ends, data begins |
+| **Type of Service (ToS)** | Sets packet priority |
+| **Total Length** | Total size of header + data |
+| **Identification** | Marks fragments of large packets |
+| **Flags** | Indicates fragmentation status |
+| **Fragment Offset** | Shows position of fragment |
+| **Time To Live (TTL)** | Limits packet lifetime across routers |
+| **Protocol** | Indicates next-level protocol (TCP/UDP) |
+| **Header Checksum** | Detects header corruption |
+| **Source IP** | Sender’s IP address |
+| **Destination IP** | Receiver’s IP address |
+| **Options** | Extra security or routing settings |
+
+---
+
+## 🌐 IPv4 vs IPv6
+| Feature | **IPv4** | **IPv6** |
+|----------|-----------|-----------|
+| **Address Format** | 4 decimal numbers (e.g., 198.51.100.0) | 8 groups of hex digits (e.g., 2002:0db8::1234) |
+| **Length** | 32 bits (4 bytes) | 128 bits (16 bytes) |
+| **Total Addresses** | ~4.3 billion | ~340 undecillion |
+| **Header Complexity** | More fields (e.g., IHL, Flags) | Simplified; adds **Flow Label** |
+| **Security** | Basic | Built-in efficiency & reduced collisions |
+
+---
+
+## 🔒 Security Insight
+- Packet analysis reveals:
+  - Source & destination info  
+  - Protocols in use  
+  - Routing and integrity data  
+- Understanding packet headers helps identify **threats, spoofing, or misrouting**.
+
+---
+
+## ✅ Summary
+- Layer 3 = **Routing, addressing, and packet delivery**  
+- IPv4 header = **13 key fields** for control and delivery  
+- IPv6 = **Larger, simpler, more secure** version of IPv4  
+- Inspecting IP headers is vital for **network security analysis**
+
+
+
+
+
+
+
+
