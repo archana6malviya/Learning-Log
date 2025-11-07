@@ -57,13 +57,9 @@ Define how data is physically transmitted over the network.
 Converts the human-readable domain name (e.g., www.example.com) into an IP address (e.g., 93.184.216.34).
 
 **The browser checks:**
-
 Browser cache
-
 OS cache
-
 Router cache
-
 DNS server
 
 # 2. Establishing a Connection
@@ -77,8 +73,6 @@ Most web traffic uses TCP for reliable connection.
 1. SYN  → Client requests a connection
 2. SYN-ACK ← Server acknowledges
 3. ACK  → Client confirms
-
-
 If HTTPS is used, TLS/SSL handshake follows to create a secure encrypted channel.
 
 # 3. Sending the Request
@@ -87,8 +81,6 @@ If HTTPS is used, TLS/SSL handshake follows to create a secure encrypted channel
 
 **The browser sends an HTTP request to the server:**
 Host: www.example.com
-
-
 HTTPS uses HTTP over TLS (Transport Layer Security) for encryption.
 
 # 4. Server Processing
@@ -98,19 +90,13 @@ The server receives the request, processes it, and prepares a response (e.g., HT
 # 5. Receiving the Response
 
 **Protocol used:** HTTP or HTTPS
-
 The server sends back an HTTP response:
-
 HTTP/1.1 200 OK
 Content-Type: text/html
-
-
 The browser starts downloading webpage components (HTML, CSS, JS, images).
 
 # 6. Rendering the Webpage
-
 The browser parses the HTML, CSS, and JavaScript files to render the webpage on screen.
-
 Additional resources may trigger more HTTP requests.
 
 # 🌐 Sequence of Protocols Used During Web Browsing
@@ -140,22 +126,17 @@ When you browse a website (e.g., https://www.example.com), several network proto
 | **8** | **Response from Server**               | **HTTP / HTTPS**                                                | Server sends web page content (HTML, CSS, JS, images) to the browser.                      |
 | **9** | **Rendering Web Page**                 | —                                                               | Browser interprets and displays the content to the user.                                   |
 
-🔄 Simplified Flow
+## 🔄 Simplified Flow
 User → DNS → TCP → TLS (if HTTPS) → HTTP/HTTPS → IP → Ethernet/Wi-Fi → Server
 Then the process reverses:
 Server → IP → TCP → TLS → HTTP Response → Browser
 
-💡 Summary
+## 💡 Summary
 
 DNS resolves the domain name.
-
 TCP establishes connection.
-
 TLS secures data (only for HTTPS).
-
 HTTP/HTTPS handles request and response.
-
 IP manages routing.
-
 Ethernet/Wi-Fi sends the data physically.
 
