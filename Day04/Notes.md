@@ -353,35 +353,89 @@ It helps network and security professionals understand, design, and troubleshoot
 ## 🧱 OSI Layers (Top to Bottom)
 
 ### **Layer 7 – Application**
-- Closest to the user — enables apps to access the network.  
+- Closest to the user — It provides an interface for applications to use the network to transmit data, and passes the data down to the presentation layer.
 - Examples: **HTTP/HTTPS, SMTP, DNS, FTP**  
 - Handles user services like web browsing, email, and file transfer.
 
 ---
 
 ### **Layer 6 – Presentation**
-- Converts data formats for sending/receiving systems.  
+- Converts data formats for sending/receiving systems.
+- It receives data from the application layer.
+- The data is in a format the sending application understands, but not always in a standard format.
+- This layer translates the data into a standard format that any computer can understand.
+- It also handles encryption, decryption, compression, and other data transformations.
+- After processing, it sends the data to the session layer.  
 - Handles **encryption, compression, translation**.  
 - Example: **SSL/TLS** encryption in HTTPS.
 
 ---
 
 ### **Layer 5 – Session**
-- Manages and maintains communication **sessions** between devices.  
+- Manages and maintains communication **sessions** between devices.
+- It receives properly formatted data from the presentation layer.
+
+It tries to set up a connection (session) with the remote computer.
+
+If the connection cannot be made, it sends an error and stops the process.
+
+If a session is created, this layer maintains and manages it.
+
+It works with the remote computer’s session layer to synchronize communication.
+
+Each session is unique, so data from different tasks doesn’t mix (like opening two browser tabs).
+
+Once the session is established and stable, it passes the data to the Transport Layer.
 - Handles **authentication, reconnection, and checkpoints**.  
 - Keeps sessions open during data transfer, then closes them.
 
 ---
 
 ### **Layer 4 – Transport**
-- Ensures **reliable delivery**, **error control**, and **segmentation**.  
+- Ensures **reliable delivery**, **error control**, and **segmentation**.
+- This layer chooses the protocol used to send data — mainly TCP or UDP.
+
+TCP (Transmission Control Protocol):
+
+Connection-based (creates a stable connection).
+
+Reliable — ensures all data arrives correctly.
+
+Resends lost packets and controls speed.
+
+Used when accuracy is important (webpages, file transfer).
+
+UDP (User Datagram Protocol):
+
+No connection — just sends data without checking.
+
+Faster but less reliable.
+
+Used when speed matters more (video calls, streaming).
+
+After choosing the protocol, the transport layer breaks data into smaller pieces:
+
+TCP → segments
+
+UDP → datagrams
 - Protocols: **TCP (reliable)**, **UDP (fast)**.  
 - Manages data flow and speed between systems.
 
 ---
 
 ### **Layer 3 – Network**
-- Handles **routing and addressing** between different networks.  
+- Handles **routing and addressing** between different networks.
+- This layer is responsible for finding the destination of your data.
+
+It decides the best route to send data across large networks like the Internet.
+
+It works with logical addresses, mainly IP addresses.
+
+Logical addressing helps keep networks organized and properly structured.
+
+The most common addressing format is IPv4 (example: 192.168.1.1).
+
+In short, it handles routing — choosing the path your data should take.
 - Uses **IP addresses** to deliver packets to destinations.  
 - Devices: **Routers**  
 - Protocols: **IP, ICMP**
@@ -389,7 +443,20 @@ It helps network and security professionals understand, design, and troubleshoot
 ---
 
 ### **Layer 2 – Data Link**
-- Transfers data within the **same network (LAN)**.  
+- Transfers data within the **same network (LAN)**.
+- This layer deals with the physical addressing of data.
+
+It takes the packet from the network layer and adds the MAC address of the destination device.
+
+Every device has a Network Interface Card (NIC) with a unique MAC address burned in by the manufacturer.
+
+MAC addresses cannot be changed (permanently), but they can be spoofed.
+
+Data on a local network is delivered using the physical MAC address, not the IP address.
+
+The data link layer also formats the data so it can be sent over the physical medium.
+
+When receiving data, it checks for errors or corruption that may have occurred during transmission.
 - Uses **MAC addresses** for local delivery.  
 - Devices: **Switches, NICs**  
 - Protocols: **HDLC, SDLC, NCP**
@@ -397,7 +464,26 @@ It helps network and security professionals understand, design, and troubleshoot
 ---
 
 ### **Layer 1 – Physical**
-- Deals with **actual hardware and transmission** (cables, signals, hubs).  
+- Deals with **actual hardware and transmission** (cables, signals, hubs).
+- Responsible for physical (MAC) addressing on the network.
+
+Receives the packet from the network layer and adds the MAC address of the destination device.
+
+Works with the Network Interface Card (NIC), which has a unique, manufacturer-assigned MAC address.
+
+MAC addresses are burned into the hardware (cannot be changed, but can be spoofed).
+
+Converts the data into frames, which are the Layer 2 data units.
+
+Ensures the data is in the correct format for physical transmission.
+
+Performs error detection (e.g., checking data integrity to see if corruption occurred during transmission).
+
+Helps control how devices access the shared medium to avoid collisions.
+
+Used by devices like switches, bridges, and NICs.
+
+Plays a key role in ensuring data is delivered correctly within the local network (LAN).
 - Converts data into bits (0s & 1s).  
 - Devices: **Hubs, Modems, Cables**
 
