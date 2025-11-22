@@ -1,10 +1,3 @@
-# Learning Objectives
-- **Types of Networks**
-- **Physical components of a network**
-- **TCP/IP model provides a framework for network communication**
-- **Data is sent and received over a network**
-- **Network Architecture**
-
 # 🌐 Network Basics
 
 ## 🧩 What is a Network?
