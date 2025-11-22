@@ -7,9 +7,53 @@ A **network** is a group of connected devices that can **communicate** with each
 
 ## 🖥️ Network Addresses
 - Devices use **unique addresses** to find each other.  
-- **IP Address:** Identifies devices on a network.  
-- **MAC Address:** Identifies the device’s hardware.  
+- **IP Address(Internet Protocol Address):** Identifies devices on a network.
+
+It is the address of a device on a network.
+It helps devices find and talk to each other.
+
+Think of it like:
+
+📮 Home address → For houses
+🌐 IP address → For computers  
+Example:
+
+192.168.1.10 (Local home network IP)
+
+8.8.8.8 (Google DNS server)
+
+Types:
+
+Public IP → given by your internet provider
+
+Private IP → used inside home/office network
+
+IPv4 → 192.168.1.1
+
+IPv6 → long format like 2001:0db8::1
+- **MAC Address(Media Access Control Address):** Identifies the device’s hardware.  
 - These ensure data reaches the **correct device**.
+- It is a unique physical identifier burned into your device’s network card (Wi-Fi or Ethernet).
+
+Think of it like:
+
+🆔 Fingerprint → Unique to you
+💻 MAC → Unique to each network device
+
+Example:
+
+A4:5E:60:12:AB:FF
+
+👉 You CANNOT change it (permanently).
+👉 Used inside the local network only.
+
+| Feature    | IP Address             | MAC Address                 |
+| ---------- | ---------------------- | --------------------------- |
+| What it is | Location address       | Device identity             |
+| Changes?   | Yes, changes often     | No, fixed                   |
+| Given by   | Network / router       | Manufacturer                |
+| Format     | 192.168.1.1            | A4:5E:60:AA:2C:31           |
+| Used in    | Internet communication | Local network communication |
 
 ---
 
